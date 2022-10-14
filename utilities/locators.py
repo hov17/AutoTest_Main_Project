@@ -16,3 +16,4 @@ class ProductPageLocators():
 class CartPageLocators():
     CART_PAGE_NAME = (By.XPATH, '//span[@class="title"]')
     CART_QUANTITY = (By.XPATH, '//div[@class="cart_quantity"]')
+    CHECKOUT_BUTTON = (By.XPATH, '//button[@id="checkout"]')

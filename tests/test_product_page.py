@@ -17,7 +17,7 @@ def test_should_be_successfully_go_to_empty_cart(browser):
 
 
 # Тест на добавления товара в корзину
-def test_should_be_successfully_add_to_cart(browser):
+def test_should_be_successfully_buy_of_product1(browser):
     url = 'https://www.saucedemo.com/'
     page = LoginPage(browser, url, timeout=10)
     page.open()
@@ -28,3 +28,4 @@ def test_should_be_successfully_add_to_cart(browser):
     page.go_to_cart()
     page = CartPage(browser, browser.current_url, timeout=10)
     page.should_be_cart_page_with_one_added_product()
+    page.go_to_checkout_page()
