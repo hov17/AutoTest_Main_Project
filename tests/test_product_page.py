@@ -8,8 +8,10 @@ def test_should_be_successfully_go_to_cart(browser):
     url = 'https://www.saucedemo.com/'
     page = LoginPage(browser, url, timeout=10)
     page.open()
+    page.get_current_url()
     page.authorization('standard_user', 'secret_sauce')
     page = ProductPage(browser, browser.current_url, timeout=10)
+    page.should_be_product_page()
     page.go_to_cart()
     page = CartPage(browser, browser.current_url, timeout=10)
     page.should_be_cart_page()

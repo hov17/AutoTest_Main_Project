@@ -8,4 +8,9 @@ class Base():
     def open(self):
         self.browser.get(self.url)
         self.browser.maximize_window()
+        print('Open browser')
 
+    # Метод получения текущего адреса URL
+    def get_current_url(self):
+        get_url = self.browser.current_url
+        print(f'Current URL: {get_url}')
