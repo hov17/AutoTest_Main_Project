@@ -11,4 +11,4 @@ class LoginPage(Base):
         self.browser.find_element(*LoginPageLocators.PASSWORD_INPUT_FIELD).send_keys(password)
         print('Input password')
         self.browser.find_element(*LoginPageLocators.LOGIN_BUTTON).click()
-        print('Click login button')
+        print('Click login button\nGo to Product page')

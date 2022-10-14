@@ -13,3 +13,9 @@ class ProductPage(Base):
         assert self.browser.find_element(*ProductPageLocators.MAIN_WORD).text == 'PRODUCTS', 'Wrong text!'
         assert self.browser.current_url == 'https://www.saucedemo.com/inventory.html', 'Wrong URL!'
 
+    # Метод на добавление товара и перехода в корзину
+    def add_product1_to_cart(self):
+        self.browser.find_element(*ProductPageLocators.PRODUCT1_ADD_TO_CART_BUTTON).click()
+        assert self.browser.find_element(*ProductPageLocators.GO_TO_CART_BUTTON).text == '1', \
+            'Add product to Cart!'
+        print('Product added to Cart')
