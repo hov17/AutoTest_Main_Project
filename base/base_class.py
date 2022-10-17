@@ -21,9 +21,9 @@ class Base():
 
     # Метод для получения скриншота страницы
     def get_screenshot(self):
-        now_date = datetime.datetime.utcnow().strftime("%d.%m.%Y.%H.%M.%S")
-        screenshot_name = 'screenshot' + now_date + '.png'
-        self.browser.save_screenshot('.\\screen\\' + screenshot_name)
+        name_screenshot = 'screenshot-' + str(datetime.datetime.utcnow().strftime("%d.%m.%Y.%H.%M.%S")) + '.png'
+        print(name_screenshot)
+        self.browser.save_screenshot('\\screen\\' + name_screenshot)
         print('Get screenshot')
 
     # Метод для проверки элемента на странице
