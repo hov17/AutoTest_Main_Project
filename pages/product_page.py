@@ -3,7 +3,7 @@ from utilities.locators import ProductPageLocators
 
 
 class ProductPage(Base):
-    # Переход в корзину
+    # Метод для перехода на страницу корзины
     def go_to_cart(self):
         self.browser.find_element(*ProductPageLocators.GO_TO_CART_BUTTON).click()
         print('Go to Cart page')

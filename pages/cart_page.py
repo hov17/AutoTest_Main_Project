@@ -4,9 +4,9 @@ from utilities.locators import CartPageLocators
 
 class CartPage(Base):
     # Метод для перехода на страницу Checkout
-    def go_to_checkout_page(self):
+    def go_to_checkout_information_page(self):
         self.browser.find_element(*CartPageLocators.CHECKOUT_BUTTON).click()
-        print('Go to Checkout page')
+        print('Go to Checkout Information page')
 
     # Метод для проверки корректности страницы Корзины
     def should_be_cart_page(self):
