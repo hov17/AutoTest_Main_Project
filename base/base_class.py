@@ -19,10 +19,15 @@ class Base():
         get_url = self.browser.current_url
         print(f'Current URL: {get_url}')
 
+    # Метод для проверки корректность URL
+    def should_correct_url(self, correct_url):
+        assert self.browser.current_url == correct_url, 'Wrong url!'
+
     # Метод для получения скриншота страницы
     def get_screenshot(self):
         name_screenshot = 'screenshot-' + str(datetime.datetime.utcnow().strftime("%d.%m.%Y.%H.%M.%S")) + '.png'
-        self.browser.save_screenshot('C:\\Users\\Эмиль\\pythonProject\\AutoTest_Main_Project\\screen\\' + name_screenshot)
+        self.browser.save_screenshot('C:\\Users\\Эмиль\\pythonProject\\AutoTest_Main_Project\\screen\\'
+                                     + name_screenshot)
         print('Get screenshot')
 
     # Метод для проверки элемента на странице

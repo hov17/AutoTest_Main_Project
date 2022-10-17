@@ -11,6 +11,8 @@ class ProductPageLocators():
     MAIN_WORD = (By.XPATH, '//span[@class="title"]')
     GO_TO_CART_BUTTON = (By.XPATH, '//div[@id="shopping_cart_container"]')
     PRODUCT1_ADD_TO_CART_BUTTON = (By.XPATH, '//button[@id="add-to-cart-sauce-labs-backpack"]')
+    BURGER_MENU = (By.XPATH, '//button[@id="react-burger-menu-btn"]')
+    ABOUT_LINK = (By.XPATH, '//a[@id="about_sidebar_link"]')
 
 
 class CartPageLocators():

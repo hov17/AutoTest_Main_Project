@@ -11,7 +11,6 @@ def test_should_be_successfully_go_to_empty_cart(browser):
     url = 'https://www.saucedemo.com/'
     page = LoginPage(browser, url, timeout=10)
     page.open()
-    page.get_current_url()
     page.authorization('standard_user', 'secret_sauce')
     page = ProductPage(browser, browser.current_url, timeout=10)
     page.go_to_cart()
@@ -37,4 +36,16 @@ def test_should_be_successfully_buy_of_product1(browser):
     page.confirmation_of_payment_for_the_order_with_1_item()
     page = FinishPage(browser, browser.current_url, timeout=10)
     page.should_be_correct_finish_page()
+    page.get_screenshot()
+
+
+# Тест перехода на страницу About
+def test_open_about_link(browser):
+    url = 'https://www.saucedemo.com/'
+    page = LoginPage(browser, url, timeout=10)
+    page.open()
+    page.authorization('standard_user', 'secret_sauce')
+    page = ProductPage(browser, browser.current_url, timeout=10)
+    page.go_to_about_page()
+    page.should_correct_url('https://saucelabs.com/')
     page.get_screenshot()

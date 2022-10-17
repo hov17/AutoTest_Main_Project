@@ -19,3 +19,9 @@ class ProductPage(Base):
         assert self.browser.find_element(*ProductPageLocators.GO_TO_CART_BUTTON).text == '1', \
             'Add product to Cart!'
         print('Product added to Cart')
+
+    # Метод перехода на страницу About
+    def go_to_about_page(self):
+        self.browser.find_element(*ProductPageLocators.BURGER_MENU).click()
+        self.browser.find_element(*ProductPageLocators.ABOUT_LINK).click()
+        print('Click About link')
