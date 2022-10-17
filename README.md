@@ -1,3 +1,3 @@
 # AutoTest_Main_Project
-Итоговый проект по курсу: "Автоматизация тестировния на Python + Selenium"
-https://www.saucedemo.com/
+Итоговый проект по курсу: "Автоматизация тестирования на Python + Selenium"
+Используемый сайт: https://www.saucedemo.com/
