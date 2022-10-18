@@ -1,5 +1,6 @@
 import datetime
 from selenium.common.exceptions import NoSuchElementException
+from utilities.logger import Logger
 
 
 class Base():
@@ -10,9 +11,11 @@ class Base():
 
     # Метод открывающий браузер в полном окне
     def open(self):
+        Logger.add_start_step(method='open')
         self.browser.get(self.url)
         self.browser.maximize_window()
         print('Open browser')
+        Logger.add_end_step(self.browser.current_url, method='open')
 
     # Метод получения текущего адреса URL
     def get_current_url(self):
@@ -25,10 +28,12 @@ class Base():
 
     # Метод для получения скриншота страницы
     def get_screenshot(self):
+        Logger.add_start_step(method='get_screenshot')
         name_screenshot = 'screenshot-' + str(datetime.datetime.utcnow().strftime("%d.%m.%Y.%H.%M.%S")) + '.png'
         self.browser.save_screenshot('C:\\Users\\Эмиль\\pythonProject\\AutoTest_Main_Project\\screen\\'
                                      + name_screenshot)
         print('Get screenshot')
+        Logger.add_end_step(self.browser.current_url, method='get_screenshot')
 
     # Метод для проверки элемента на странице
     def is_element_present(self, how, what):
