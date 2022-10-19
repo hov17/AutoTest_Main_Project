@@ -7,8 +7,6 @@ lib/
 bin/
 include/
 .Python/
-screen/
-logs/
 
 # These lines are suggested according to the svn:ignore property
 # Feel free to enable them by uncommenting them
@@ -59,3 +57,8 @@ pip-wheel-metadata/
 
 # pytest debug logs generated via --debug
 pytestdebug.log
+
+# My files
+screen/
+logs/
+tests_results
